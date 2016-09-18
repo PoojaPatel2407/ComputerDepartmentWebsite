@@ -1,0 +1,103 @@
+<style>
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font: 16px/1 sans-serif
+}
+
+/*VERTICAL MENU*/
+nav.vertical {
+	position: relative;
+	width: 200px;
+}
+
+/* ALL UL */
+nav.vertical ul {
+	list-style: none;
+}
+/* ALL LI */
+nav.vertical li {
+	position: relative;
+}
+/* ALL A */
+nav.vertical a {
+	display: block;
+	color: #eee;
+	text-decoration: none;
+	padding: 10px 15px;
+	background: #667;
+	transition: 0.2s;
+}
+/* ALL A HOVER */
+nav.vertical li:hover>a {
+	background: #778;
+}
+
+/* INNER UL HIDE */
+nav.vertical ul ul {
+	position: absolute;
+	left: 0%;
+	top: 0;
+	width: 100%;
+	visibility: hidden;
+	opacity: 0;
+	transition: transform 0.2s;
+	transform: translateX(50px);
+}
+/* INNER UL SHOW */
+nav.vertical li:hover>ul {
+	left: 100%;
+	visibility: visible;
+	opacity: 1;
+	transform: translateX(0px);
+}
+
+</style>
+<div style="position:fixed; margin-right: 2px; width: 100px; " align="right">
+<nav class="vertical">
+	<ul>
+		<li><a href="home.jsp">Home</a></li>
+		<li><a href="#">Exam</a>
+			<ul>
+				<li><a href="Exam.jsp">View Exam</a></li>
+				<li><a href="CExam.jsp">Create Exam</a></li>
+
+			</ul></li>
+			<li><a href="#">Result</a>
+			<ul>
+				<li><a href="ViewResult.jsp">View Result</a></li>
+
+			</ul></li>
+			<li><a href="#">Course</a>
+			<ul>
+				<li><a href="ListCourses.jsp">View Courses</a></li>
+				<li><a href="CreateCourse.jsp">Create Courses</a></li>
+
+			</ul></li>
+			
+			<li><a href="#">Alumni</a>
+			<ul>
+				<li><a href="AddAlumni.jsp">Add Alumni</a></li>
+				<li><a href="ChangeAlumni.jsp">View Alumni</a></li>
+
+			</ul></li>
+			
+			<li><a href="#">Resource</a>
+			<ul>
+			<li><a href="AddResource.jsp">Add Resource</a></li>
+				<li><a href="MakeReservation.jsp">Make Reservations</a></li>
+				<li><a href="MyReservation.jsp">My Reservations</a></li>
+
+			</ul></li>
+			
+			<li><a href="PhDStudentStatus.jsp">PhD Students</a></li>
+		<li><a href="ViewAnnouncement.jsp">Announcement</a></li>
+		<li><a href="DiscussionBoard.jsp">Discussion</a></li>
+		<li><a href="logout">Logout</a></li>
+	</ul>
+</nav>
+</div>
